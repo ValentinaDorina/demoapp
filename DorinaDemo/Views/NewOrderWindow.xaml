@@ -1,0 +1,146 @@
+﻿<Window x:Class="DorinaDemo.Views.NewOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новый заказ" SizeToContent="WidthAndHeight" Background="Lavender">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto">
+                <Label Content="Дата и время заказа:" Margin="10"/>
+                <DatePicker x:Name="OrderDatePicker" Margin="10"></DatePicker>
+                <ComboBox  x:Name="OrderHourComboBox" Width="60" Height="25" Margin="10">
+                    <ComboBoxItem>01</ComboBoxItem>
+                    <ComboBoxItem>02</ComboBoxItem>
+                    <ComboBoxItem>03</ComboBoxItem>
+                    <ComboBoxItem>04</ComboBoxItem>
+                    <ComboBoxItem>05</ComboBoxItem>
+                    <ComboBoxItem>06</ComboBoxItem>
+                    <ComboBoxItem>07</ComboBoxItem>
+                    <ComboBoxItem>08</ComboBoxItem>
+                    <ComboBoxItem>09</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>21</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>23</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                </ComboBox>
+                <Label Content=":" FontSize="20" />
+                <ComboBox x:Name="OrderMinuteComboBox" Width="60" Height="25" Margin="10">
+                    <ComboBoxItem>01</ComboBoxItem>
+                    <ComboBoxItem>02</ComboBoxItem>
+                    <ComboBoxItem>03</ComboBoxItem>
+                    <ComboBoxItem>04</ComboBoxItem>
+                    <ComboBoxItem>05</ComboBoxItem>
+                    <ComboBoxItem>06</ComboBoxItem>
+                    <ComboBoxItem>07</ComboBoxItem>
+                    <ComboBoxItem>08</ComboBoxItem>
+                    <ComboBoxItem>09</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>21</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>23</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                    <ComboBoxItem>25</ComboBoxItem>
+                    <ComboBoxItem>26</ComboBoxItem>
+                    <ComboBoxItem>27</ComboBoxItem>
+                    <ComboBoxItem>28</ComboBoxItem>
+                    <ComboBoxItem>29</ComboBoxItem>
+                    <ComboBoxItem>30</ComboBoxItem>
+                    <ComboBoxItem>31</ComboBoxItem>
+                    <ComboBoxItem>32</ComboBoxItem>
+                    <ComboBoxItem>33</ComboBoxItem>
+                    <ComboBoxItem>34</ComboBoxItem>
+                    <ComboBoxItem>35</ComboBoxItem>
+                    <ComboBoxItem>36</ComboBoxItem>
+                    <ComboBoxItem>37</ComboBoxItem>
+                    <ComboBoxItem>38</ComboBoxItem>
+                    <ComboBoxItem>39</ComboBoxItem>
+                    <ComboBoxItem>40</ComboBoxItem>
+                    <ComboBoxItem>41</ComboBoxItem>
+                    <ComboBoxItem>42</ComboBoxItem>
+                    <ComboBoxItem>43</ComboBoxItem>
+                    <ComboBoxItem>44</ComboBoxItem>
+                    <ComboBoxItem>45</ComboBoxItem>
+                    <ComboBoxItem>46</ComboBoxItem>
+                    <ComboBoxItem>47</ComboBoxItem>
+                    <ComboBoxItem>48</ComboBoxItem>
+                    <ComboBoxItem>49</ComboBoxItem>
+                    <ComboBoxItem>50</ComboBoxItem>
+                    <ComboBoxItem>51</ComboBoxItem>
+                    <ComboBoxItem>52</ComboBoxItem>
+                    <ComboBoxItem>53</ComboBoxItem>
+                    <ComboBoxItem>54</ComboBoxItem>
+                    <ComboBoxItem>55</ComboBoxItem>
+                    <ComboBoxItem>56</ComboBoxItem>
+                    <ComboBoxItem>57</ComboBoxItem>
+                    <ComboBoxItem>58</ComboBoxItem>
+                    <ComboBoxItem>59</ComboBoxItem>
+                    <ComboBoxItem>60</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            
+     
+            
+
+            <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto">
+                <Label Content="Стол №:" Margin="10"/>
+                <TextBox x:Name="TableNum" Width="30" Height="25" Margin="0, 0,50,0"></TextBox>
+                <Label Content="Количество персон:" Margin="10"/>
+                <TextBox x:Name="CountPerson" Width="30" Height="25"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto">
+                <Label Content="Блюдо:" Margin="10,10,0,10"/>
+                <ComboBox Width="70" Height="25" Margin="10" x:Name="ProductName" ItemsSource="{Binding Products}"></ComboBox>
+                <!--
+                <Label Content="Количество:" Margin="10,10,0,10"/>
+                <TextBox Width="30" Height="25" Margin="0, 0,0,0"></TextBox>
+                -->
+                <Button Margin="10" Width="160" Content="Добавить блюдо/напиток" Click="AddDishButton_Click">
+                    
+                </Button>
+                <!--
+                <Label Content="Напитки:"  Margin="0,10,0,10"/>
+                <TextBox Width="60" Height="25"  Margin="0,10,10,10"></TextBox>
+                <TextBox Width="30" Height="25" ></TextBox>
+                -->
+            </StackPanel>
+
+
+
+            <ListBox x:Name="OrderItemsListBox" Grid.Row="1" Margin="10">
+                
+            </ListBox>
+            
+            
+            <Button Content="Создать заказ" Width="300" Height='30' Margin="20" Click="AddOrderButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
